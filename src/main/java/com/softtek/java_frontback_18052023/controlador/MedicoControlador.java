@@ -30,9 +30,9 @@ public class MedicoControlador {
         return servicio.retornarMedico(id).toString();
     }
 
-    @PostMapping("/getAll")
+    @PostMapping(value = "/addMedico", consumes = "application/json", produces = "application/json")
     public void addMedico(@RequestBody Medico med){
-        System.out.println(med);
+        this.servicio.addMedico(med);
 //        servicio.addMedico(med);
     }
 
